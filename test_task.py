@@ -112,3 +112,10 @@ def test_third_task_4():
     data = 1_912_160, 1_550_000
     actual = major_third.overpayment_on_loan(data)
     assert 3621690 == actual
+
+
+@pytest.mark.xfail(strict=True)
+def test_third_task_5():
+    data = 1_912_160, 1_550_000
+    actual = major_third.overpayment_on_loan(data)
+    assert 1 == actual
