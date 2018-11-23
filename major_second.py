@@ -12,30 +12,5 @@ def calculate_deposit(data):
     percentage_rate = data[1]
     term_of_placement = data[2]
 
-    if term_of_placement == 1:
-        total = (sum_of_deposit * percentage_rate * 31) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 3:
-        total = (sum_of_deposit * percentage_rate * 92) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 6:
-        total = (sum_of_deposit * percentage_rate * 182) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 9:
-        total = (sum_of_deposit * percentage_rate * 273) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 12:
-        total = (sum_of_deposit * percentage_rate * 365) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 18:
-        total = (sum_of_deposit * percentage_rate * 548) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 24:
-        total = (sum_of_deposit * percentage_rate * 730) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 36:
-        total = (sum_of_deposit * percentage_rate * 1095) / (365 * 100) + sum_of_deposit
-        return round(total)
-    if term_of_placement == 60:
-        total = (sum_of_deposit * percentage_rate * 1825) / (365 * 100) + sum_of_deposit
-        return round(total)
+    total = (sum_of_deposit * percentage_rate * term_of_placement) / 12 / 100 + sum_of_deposit
+    return round(total)

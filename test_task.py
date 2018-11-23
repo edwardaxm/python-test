@@ -77,7 +77,7 @@ def test_second_task_2():
 def test_second_task_3():
     data = 50_000, 8, 1
     actual = major_second.calculate_deposit(data)
-    assert 50340 == actual
+    assert 50333 == actual
 
 
 @pytest.mark.xfail(strict=True)
